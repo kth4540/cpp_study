@@ -1,0 +1,4 @@
+﻿  3-9.cpp
+C:\Users\USER\Desktop\C\cpp_study\3-9\3-9\3-9.cpp(71,16): warning C4101: 'red': unreferenced local variable
+C:\Users\USER\Desktop\C\cpp_study\3-9\3-9\3-9.cpp(71,21): warning C4101: 'green': unreferenced local variable
+  3-9.vcxproj -> C:\Users\USER\Desktop\C\cpp_study\3-9\Debug\3-9.exe
