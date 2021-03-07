@@ -1,5 +1,21 @@
 #include <iostream>
 using namespace std;
+class Exception
+{
+public:
+	void report()
+	{
+		cerr << "exception report" << endl;
+	}
+};
+class ArrayException :public Exception
+{
+public:
+	void report()
+	{
+		cout << "Array exception" << endl;
+	}
+};
 class MyArray
 {
 private:
@@ -7,7 +23,8 @@ private:
 public:
 	int& operator [](const int& idx)
 	{
-		if (idx < 0 || idx >= 5)throw - 1;
+		if (idx < 0 || idx >= 5)throw ArrayException();
+
 		return m_data[idx];
 	}
 };
@@ -23,11 +40,36 @@ void dosome()
 	{
 		cerr << "exception" << x << endl;
 	}
+	//catch (ArrayException& e)
+	//{
+	//	cout << "dosome" << endl;
+	//	e.report();
+	//	throw e;
+	//}
+	catch (Exception& e)
+	{
+		cout << "dosome" << endl;
+
+		e.report();
+		throw;
+	}
 }
 int main()
 {
-	dosome();
-
+	try
+	{
+		dosome();
+	}
+	catch(ArrayException& e)
+	{
+		cout << "main()" << endl;
+		e.report();
+	}
+	catch (Exception& e)
+	{
+		cout << "main()" << endl;
+		e.report();
+	}
 	return 0;
 }
 
