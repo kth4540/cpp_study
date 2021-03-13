@@ -47,25 +47,25 @@ public:
 	}
 
 
-	//AutoPtr(AutoPtr&& a) :m_ptr(a.m_ptr)
-	//{
-	//	a.m_ptr = nullptr;
-	//	std::cout << "AutoPtr move constructor" << std::endl;
-	//}
+	AutoPtr(AutoPtr&& a) :m_ptr(a.m_ptr)
+	{
+		a.m_ptr = nullptr;
+		std::cout << "AutoPtr move constructor" << std::endl;
+	}
 
-	//AutoPtr& operator=(AutoPtr&& a)
-	//{
-	//	std::cout << "AutoPtr move assignment" << std::endl;
-	//	if (&a == this)
-	//		return *this;
+	AutoPtr& operator=(AutoPtr&& a)
+	{
+		std::cout << "AutoPtr move assignment" << std::endl;
+		if (&a == this)
+			return *this;
 
-	//	if (!m_ptr)delete m_ptr;
+		if (!m_ptr)delete m_ptr;
 
-	//	//shallow copy
-	//	m_ptr = a.m_ptr;
-	//	a.m_ptr = nullptr;
+		//shallow copy
+		m_ptr = a.m_ptr;
+		a.m_ptr = nullptr;
 
-	//	return *this;
-	//}
+		return *this;
+	}
 };
 

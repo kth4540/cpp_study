@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{64f212dc-5211-40a6-b249-822298e3952e}</ProjectGuid>
-    <RootNamespace>My154</RootNamespace>
+    <ProjectGuid>{1c133eda-ce3d-452c-b325-255b0b19fe66}</ProjectGuid>
+    <RootNamespace>My156</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="15-4.cpp" />
+    <ClCompile Include="15-6.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AutoPtr.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
